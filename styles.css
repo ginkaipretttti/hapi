@@ -1,8 +1,10 @@
+/* Define general styles */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(back2.gif);
+    background-size: cover; /* Adjust background size for smaller screens */
     height: 100vh;
 }
 
@@ -12,7 +14,7 @@ body {
     margin-right: 100px;
 }
 
-.gift {
+.gift, .click {
     position: relative;
     width: 150px;
     height: 100px;
@@ -215,15 +217,35 @@ body {
     to {background-color: #1d2d44;}
 }
 
-.word-container {
-    text-align: center;
-    margin-top: 20px; /* Adjust as needed */
-}
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: cover; /* Adjust background size for smaller screens */
+    }
 
-.word {
-    font-size: 15px;
-    color: #000000;
-    max-width: 600px;
-    margin: 0 auto;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding a shadow effect */
-}
+    .birthday-gift {
+        margin-bottom: 50px; /* Reduce margin for smaller screens */
+        margin-right: 0; /* Remove right margin for smaller screens */
+    }
+
+    .gift, .click {
+        width: 120px; /* Adjust gift and click size for smaller screens */
+        height: 80px; /* Adjust gift and click size for smaller screens */
+    }
+
+    .click {
+        width: 140px; /* Adjust click size for smaller screens */
+        height: 30px; /* Adjust click size for smaller screens */
+        top: -30px; /* Adjust position for smaller screens */
+    }
+
+    .wishes {
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+
+    .sparkles {
+        left: 20px; /* Adjust position for smaller screens */
+    }
+
+    .word {
+        font-size: 12px;
